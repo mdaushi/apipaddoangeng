@@ -18,3 +18,7 @@ $router->get('/', function () use ($router) {
 // GET
 $router->get('/doa', 'DoasController@index');
 $router->get('/doa/{id}', 'DoasController@getById');
+
+$router->get('/kategori', 'KategoriController@index');
+$router->get('/kategori/{id}', 'KategoriController@getById');
+

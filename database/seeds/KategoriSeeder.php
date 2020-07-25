@@ -11,14 +11,11 @@ class KategoriSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('kategori')->insert([
-            [
-                'nama_kategori' => 'Fajar'
-            ],
-            [
-                'nama_kategori' => 'Malam'
-            ]
-
-        ]);
+        $kategoris = ["fajar", "pagi", "siang", "sore", "malam"];
+        foreach($kategoris as $kategori){
+            DB::table('kategori')->insert([
+                'nama_kategori' => $kategori
+            ]);
+        }
     }
 }

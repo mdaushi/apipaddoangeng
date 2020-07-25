@@ -4,18 +4,18 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Doa extends Model
+class Kategori extends Model
 {
-    // protected $table = 'doas';
+    protected $table = 'kategori';
 
     protected $guarded = [];
     protected $hidden = [
         'created_at',
         'updated_at'
     ];
-
-    public function kategori()
+    
+    public function doa()
     {
-        return $this->belongsTo(kategori::class, 'id_kategori', 'id');
+        return $this->hasMany(Doa::class, 'id_kategori', 'id');
     }
 }
